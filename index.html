@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css i-Card Challenge</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        :root{
+            --color: orange;
+        }
+        .container{
+            height: 340px;
+            width: 250px;
+            /* border: 1px solid red; */
+            border-radius: 18px;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.754);
+        }
+        .container > .header{
+            height: 35%;
+            width: 100%;
+            background-color:var(--color);
+            border-top-right-radius: 18px;
+            border-top-left-radius: 18px;
+        }
+        .header img{
+            height: 130px;
+            aspect-ratio: 1;
+            object-fit: contain;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: 65px;
+            top: 5%;
+            border: 5px solid var(--color);
+            transition: all 0.2s;
+            cursor: pointer;
+            padding: 2px;
+        }
+        .header img:hover{
+            transform: scale(1.2) rotate(360deg);
+            box-shadow: 0px 0px 30px rgb(0, 0, 0) ;
+          
+            /* left:70px; */
+        }
+        
+        .facebook{
+            display: inline-block;
+            color: blue;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .facebook:hover{
+            color: var(--color);
+           transform: scale(1.5) rotate(-10deg);
+        }
+        .twitter{
+            display: inline-block;
+            color: skyblue;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .twitter:hover{
+            color: var(--color);
+            transform: scale(1.5) rotate(10deg);
+        }
+        .instagram{
+            color: rgb(235, 19, 170);
+            display: inline-block;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .instagram:hover{
+            color: var(--color);
+            transform: scale(1.5) rotate(-10deg);
+        }
+        .youtube{
+            cursor: pointer;
+            color: red;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+        .youtube:hover{
+            color: var(--color);
+            transform: scale(1.5) rotate(10deg);
+        }
+        .footer h2{
+            margin-top: 40px;
+            text-align: center;
+            margin-bottom: 0px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .footer h2:hover{
+            transform: scale(1.09);
+        }
+        .footer p {
+            margin-top: 2px;
+            margin-bottom: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .footer p:hover{
+            transform: scale(1.09);
+
+        }
+        .icons,.btn,.status,.footer p{
+            text-align: center;
+        }
+        .icons{
+            font-size: 22px;
+            font-weight: 500;
+            padding: 5px;
+        }
+        .btn button{
+            margin-top: 5px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            background-color:var(--color);
+            color: #fff;
+            font-weight: 600;
+            transition: all 0.1s;
+            cursor: pointer;
+        }
+     .btn button:hover{
+        transform: scale(1.1) rotate(10deg);
+     }
+        .btn button:active{
+            transform: scale(0.9) rotate(-20deg);
+        }
+        .btn{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 5px;
+        }
+        .status{
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            gap: 0px;
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+        .slike{
+            border-right: 2px solid rgba(128, 128, 128, 0.7);
+            padding-right: 20px;
+        }
+        .scomment{
+            border-right: 2px solid rgba(128, 128, 128, 0.7);
+            padding-right: 20px;
+        }
+       
+        .status  i {
+            padding: 5px;
+        }
+        .dropdownlist{
+            margin-top: 18px;
+            margin-left: 20px;
+            border-radius: 5px;
+        }
+        .clbtn{
+            /* background-color: var(--color); */
+            border: none;
+            padding: 5px 10px;
+            border-radius: 9px;
+            font-weight: 600;
+            box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.543);
+            transition: all 0.1s;
+        }
+        .clbtn:active{
+            transform: scale(0.9);
+        }
+        .ilike{
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .ilike:hover{
+            transform: scale(1.3);
+            color: var(--color);
+            font-weight: 900;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><img src="LOGO.jpg" alt=""></div>
+        <div class="footer">
+            <h2>IT Computer Studies</h2>
+            <p>Computer & Training Center</p>
+            <div class="icons">
+                <i class="ri-facebook-circle-fill facebook i"></i>
+                <i class="ri-twitter-fill twitter i"></i>
+                <i class="ri-instagram-fill instagram i"></i>
+                <i class="ri-youtube-fill youtube i"></i>
+            </div>
+            <div class="btn">
+                <button class="sub">Subscribe</button>
+                <button class="msg">Message</button>
+            </div>
+            <div class="status">
+                <div class="like"><i class="ri-heart-line ilike"></i><span class="slike">60K</span></div>
+                <div class="comment"><i class="ri-chat-1-line"></i><span class="scomment">20K</span></div>
+                <div class="share"><i class="ri-share-forward-line  ishare"></i><span class="sshare">12K</span></div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="dropdownlist">
+        <select id="colorPicker">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+            <option value="skyblue">Sky-Blue</option>
+        </select>
+        <button class="clbtn" onclick="chooseColor();">Apply Color</button>
+    </div>
+    <script>
+        function chooseColor(){
+            let color =document.querySelector("#colorPicker").value;
+            document.documentElement.style.setProperty("--color",color)
+        }
+      
+    </script>
+</body>
+
+</html>
